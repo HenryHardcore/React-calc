@@ -11,24 +11,27 @@ import React, {useState, useEffect, useRef} from "react";
 function Calculator() {
   const [display, setDisplay] = useState("");
   const [input, setInput] = useState("");
-  const [flag, setFlag] = useState(true);
+  const [flag, setFlag] = useState(false);
+
+  
 
   function povecanje() {
-    if(flag) {
-      const elements = document.querySelectorAll('.dodatak');
-      elements.forEach(element => {
-      element.style.display =  'none';
-    });
-    const dugmad = document.querySelector('.dugmad');
-    
-    dugmad.style.gridTemplateColumns = 'repeat(4, 1fr)';
-    dugmad.style.gridTemplateRows = 'repeat(3, 1fr)';
-    setFlag(prev => !prev);
-    return;
-    }
-    
     setFlag(prev => !prev);
   }
+
+  useEffect(() => {
+    
+    const elements = document.querySelectorAll('.dodatak');
+    elements.forEach(element => {
+      element.style.display = flag ? 'none' : '';
+    });
+
+    const dugmad = document.querySelector('.dugmad');
+    dugmad.style.gridTemplateColumns = flag ? 'repeat(4, 1fr)' : 'repeat(5, 1fr)';
+    dugmad.style.gridTemplateRows = flag ? 'repeat(5, 1fr)' : 'repeat(6, 1fr)';
+    
+    
+  }, [flag]);
 
 function dodajZnak(znak) {
     if (display === "error") {
