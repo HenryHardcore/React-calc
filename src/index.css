@@ -1,0 +1,84 @@
+.glavni-div {
+  background-color: rgb(53, 36, 36);
+  margin: auto auto;
+  width: 25%;
+  height: 50%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  min-width: 550px;
+}
+.display {
+  border: 2px solid black;
+  width: 95%;
+  margin: 40px auto;
+  flex: 1;
+  background-color: wheat;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 45px;
+  overflow: hidden;
+}
+.neprikaz {
+  display: none;
+}
+.dugmad {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  flex: 4;
+  border-radius: 15px;
+  border: none;
+}
+.fotkica {
+  width: 40%;
+  object-fit: contain;
+  display: block;
+  transition: 0.15s;
+}
+.fotkica:hover {
+  width: 50%;
+  
+}
+.fotkica:active {
+  width: 40%;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0; 
+}
+.veliki {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(53, 36, 36);
+  color: wheat;
+  border: none;
+  transition: 0.15s;
+  border-radius: 15px;
+}
+button:hover {
+  font-size: 40px;
+}
+button:active {
+  font-size: 30px;
+}
+p {
+  margin: 0;
+}
